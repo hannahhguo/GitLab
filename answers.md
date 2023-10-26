@@ -21,6 +21,14 @@ d1d8331
 4. What changed between commit e474c and 82045?
 added int() around x["Gross"] in line 18 & changed 5 to 6 in line 20
 
+
+Sources for "Making things a little messier"
+Q3: 
+- https://www.educative.io/answers/what-are-keyword-arguments-in-python#
+Q5:
+- https://www.atlassian.com/git/tutorials/using-branches/git-merge
+
+
 ## Predicting merges
 
 Assume at the start of each of these three questions that your
@@ -41,6 +49,7 @@ What branches would change, and how?
 git checkout test
 git merge top_N
 ```
+git would merge the branches test & top_N to become one branch; top_N I think would become obsolete (i.e. merges into test). 
 
 6. What do you think would happen if you ran the following commands?
 What branches would change, and how?
@@ -48,6 +57,8 @@ What branches would change, and how?
 git checkout top_ten
 git merge test
 ```
+git would merge the branches test & top_ten to become one branch; test would become the obsolete branch (i.e. merges into top_ten).
+
 
 7. What do you think would happen if you ran the following commands?
 What branches would change, and how?
@@ -56,3 +67,4 @@ git checkout test
 git rebase top_ten
 git rebase top_N
 ```
+I think the branches of top_ten and top_N will attempt to get merged into test (one at a time), but there will be a merge conflict which will need to be resolved. 
